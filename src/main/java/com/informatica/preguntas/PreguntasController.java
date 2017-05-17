@@ -8,10 +8,27 @@ import org.springframework.web.servlet.ModelAndView;
 public class PreguntasController {
 
     @RequestMapping(value = "/")
-    public ModelAndView login() {
+    public ModelAndView index() {
         ModelAndView mv = new ModelAndView();
-        mv.setViewName("login");
-        
+        mv.setViewName("index");
+
         return mv;
     }
+
+    @RequestMapping(value = "/cabecera")
+    public ModelAndView cabecera() {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("cabecera");
+
+        return mv;
+    }
+
+    @RequestMapping(value = "/pie")
+    public ModelAndView pie() {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("pie");
+
+        return mv;
+    }
+
 }
