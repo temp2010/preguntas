@@ -5,4 +5,4 @@
  */
 var app = angular.module("app", ['ngRoute']);
 app.value('logo', 'recursos/imagenes/logo.png');
-app.controller('index', ['$scope', function($scope) { }]);
+app.controller('index', ['$scope', function ($scope) { }]);

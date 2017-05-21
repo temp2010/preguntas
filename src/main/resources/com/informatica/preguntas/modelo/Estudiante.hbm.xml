@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 21-may-2017 11:18:12 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.informatica.preguntas.modelo.Estudiante" table="estudiante" schema="public" optimistic-lock="version">
+        <id name="codigoEstudiante" type="long">
+            <column name="codigo_estudiante" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombreEstudiante" type="string">
+            <column name="nombre_estudiante" length="100" not-null="true" />
+        </property>
+        <property name="contrasena" type="string">
+            <column name="contrasena" length="72" not-null="true" />
+        </property>
+        <set name="inscribes" table="inscribe" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="codigo_estudiante" not-null="true" />
+            </key>
+            <one-to-many class="com.informatica.preguntas.modelo.Inscribe" />
+        </set>
+        <set name="presentas" table="presenta" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="codigo_estudiante" not-null="true" />
+            </key>
+            <one-to-many class="com.informatica.preguntas.modelo.Presenta" />
+        </set>
+        <set name="respondes" table="responde" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="codigo_estudiante" not-null="true" />
+            </key>
+            <one-to-many class="com.informatica.preguntas.modelo.Responde" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 21-may-2017 11:18:12 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.informatica.preguntas.modelo.Respuesta" table="respuesta" schema="public" optimistic-lock="version">
+        <id name="idRespuesta" type="int">
+            <column name="id_respuesta" />
+            <generator class="assigned" />
+        </id>
+        <property name="respuesta" type="string">
+            <column name="respuesta" not-null="true" />
+        </property>
+        <set name="asocias" table="asocia" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_respuesta" not-null="true" />
+            </key>
+            <one-to-many class="com.informatica.preguntas.modelo.Asocia" />
+        </set>
+        <set name="respondes" table="responde" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_respuesta" not-null="true" />
+            </key>
+            <one-to-many class="com.informatica.preguntas.modelo.Responde" />
+        </set>
+    </class>
+</hibernate-mapping>
