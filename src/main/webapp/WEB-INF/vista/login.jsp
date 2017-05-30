@@ -1,4 +1,4 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -47,15 +47,16 @@
                                 </div>
                             </div>
                             <div class="form-bottom">
-                                <form role="form" action="index" method="post" class="login-form">
+                                <form role="form" action="validar" method="post" class="login-form">
                                     <div class="form-group">
-                                        <label class="sr-only" for="form-username">Usuario</label>
-                                        <input type="text" name="form-username" placeholder="Usuario..." class="form-username form-control" id="form-username">
+                                        <label class="sr-only" for="nombre">Usuario</label>
+                                        <input type="text" name="nombre" placeholder="Usuario..." class="form-username form-control" id="nombre">
                                     </div>
                                     <div class="form-group">
-                                        <label class="sr-only" for="form-password">Contraseña</label>
-                                        <input type="password" name="form-password" placeholder="Contraseña..." class="form-password form-control" id="form-password">
+                                        <label class="sr-only" for="contrasena">Contraseña</label>
+                                        <input type="password" name="contrasena" placeholder="Contraseña..." class="form-password form-control" id="contrasena">
                                     </div>
+                                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
                                     <button type="submit" class="btn">Ingresar!</button>
                                 </form>
                             </div>
