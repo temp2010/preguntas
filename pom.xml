@@ -4,9 +4,9 @@
          xmlns:mvc="http://www.springframework.org/schema/mvc"
          xmlns:tx="http://www.springframework.org/schema/tx"
          xsi:schemaLocation="
-            http://www.springframework.org/schema/beans   http://www.springframework.org/schema/beans/spring-beans-4.3.7.xsd
-            http://www.springframework.org/schema/tx      http://www.springframework.org/schema/context-4.3.7.xsd
-            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.7.xsd">
+            http://www.springframework.org/schema/beans   http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/tx      http://www.springframework.org/schema/context.xsd
+            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.informatica</groupId>
     <artifactId>preguntas</artifactId>
@@ -15,7 +15,7 @@
     <name>preguntas</name>
     
     <properties>
-        <spring.version>4.3.7.RELEASE</spring.version>
+        <spring.version>4.2.2.RELEASE</spring.version>
         <spring-security.version>4.2.2.RELEASE</spring-security.version>
         <postgresql.version>42.1.1</postgresql.version>
         <hibernate.version>5.2.10.Final</hibernate.version>
@@ -72,6 +72,17 @@
                 <version>2.3</version>
                 <configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>9.4.5.v20170502</version>
+                <configuration>
+                    <scanIntervalSeconds>10</scanIntervalSeconds>
+                    <webApp>
+                        <contextPath>/</contextPath>
+                    </webApp>
                 </configuration>
             </plugin>
         </plugins>

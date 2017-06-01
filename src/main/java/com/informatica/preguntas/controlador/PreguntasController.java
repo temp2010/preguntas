@@ -1,5 +1,10 @@
 package com.informatica.preguntas.controlador;
 
+import java.util.List;
+
+import com.informatica.preguntas.datos.presentaDAO;
+import com.informatica.preguntas.modelo.Presenta;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -7,7 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class PreguntasController {
-
+    
     @RequestMapping(value = {"/", "/login"}, method = RequestMethod.GET)
     public ModelAndView login() {
         ModelAndView mv = new ModelAndView();
@@ -36,6 +41,17 @@ public class PreguntasController {
     public ModelAndView pie() {
         ModelAndView mv = new ModelAndView();
         mv.setViewName("pie");
+
+        return mv;
+    }
+    
+    @RequestMapping(value = "/presenta")
+    public ModelAndView presenta() {
+        presentaDAO presentaDAO = null;
+        List<Presenta> listaPresenta = presentaDAO.lista();
+        ModelAndView mv = new ModelAndView();
+        mv.addObject("listaPresenta", listaPresenta);
+        mv.setViewName("presenta");
 
         return mv;
     }

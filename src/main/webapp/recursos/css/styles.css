@@ -581,6 +581,10 @@ body {
     clear:both;
 }
 
+.icono .glyphicon {
+    font-size: 5em;
+}
+
 /* Responsive CSS */
 
 /* Mobile phones */

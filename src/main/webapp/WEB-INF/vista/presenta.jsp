@@ -42,16 +42,7 @@
                         <table class="table text-center">
                             <tr>
                                 <td>
-                                    <a class="icono" href="presenta">
-                                        <span class="glyphicon glyphicon-calendar"></span><br />
-                                        <span> Presentar Examen </span>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a class="icono" href="resultados">
-                                        <span class="glyphicon glyphicon-stats"></span><br />
-                                        <p> Ver Resultados </p>
-                                    </a>
+examen
                                 </td>
                             </tr>
                         </table>

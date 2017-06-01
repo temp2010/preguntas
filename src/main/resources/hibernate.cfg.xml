@@ -41,10 +41,11 @@ Contributor(s):
 -->
 <hibernate-configuration>
     <session-factory>
-        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
-        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-        <property name="hibernate.connection.url">jdbc:postgresql://127.0.0.1:5432/preguntas</property>
-        <property name="hibernate.connection.username">preguntas</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL9Dialect</property>
+        <property name="hibernate.connection.driver_class">${jdbc.driverClassName}</property>
+        <property name="hibernate.connection.url">${jdbc.url}</property>
+        <property name="hibernate.connection.username">${jdbc.username}</property>
+        <property name="show_sql">true</property>
         <mapping resource="com/informatica/preguntas/modelo/Pregunta.hbm.xml"/>
         <mapping resource="com/informatica/preguntas/modelo/Asocia.hbm.xml"/>
         <mapping resource="com/informatica/preguntas/modelo/Inscribe.hbm.xml"/>
