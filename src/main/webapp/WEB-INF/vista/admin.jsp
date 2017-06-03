@@ -34,7 +34,7 @@
                         <ul class="nav">
                             <li class="current"><a href="index"><i class="glyphicon glyphicon-home"></i> Inicio</a></li>
                             <li><a href="admin"><i class="glyphicon glyphicon-pencil"></i> Administrar</a></li>
-                            <li><a href="logout"><i class="glyphicon glyphicon-list"></i> Salir</a></li>
+                            <li><a href="login"><i class="glyphicon glyphicon-list"></i> Salir</a></li>
                         </ul>
                     </div>
                 </div>
@@ -43,15 +43,21 @@
                         <table class="table text-center">
                             <tr>
                                 <td>
-                                    <a class="icono" href="presenta">
+                                    <a class="icono" href="respuesta">
                                         <span class="glyphicon glyphicon-calendar"></span><br />
-                                        <span> Presentar Examen </span>
+                                        <span> Respuestas </span>
                                     </a>
                                 </td>
                                 <td>
-                                    <a class="icono" href="resultados">
+                                    <a class="icono" href="pregunta">
                                         <span class="glyphicon glyphicon-stats"></span><br />
-                                        <p> Ver Resultados </p>
+                                        <p> Preguntas </p>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a class="icono" href="asocia">
+                                        <span class="glyphicon glyphicon-tasks"></span><br />
+                                        <p> Asocia </p>
                                     </a>
                                 </td>
                             </tr>

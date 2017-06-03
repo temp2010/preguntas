@@ -6,7 +6,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="recursos/imagenes/ico/favicon.png">
+        <link rel="shortcut icon" href="recursos2/imagenes/ico/favicon.png">
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
         <link rel="stylesheet" href="recursos/css/bootstrap.min.css">
         <link rel="stylesheet" href="recursos/css/form-elements.css">
